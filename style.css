@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(223, 241, 231);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    max-width: 600px;  /* form nebude širší než 500px */
+    width: 90%;       /* ale na malých obrazovkách zaberie celú šírku */
+    margin: 2rem auto; /* centrovanie horizontálne + medzera zhora/dolu */
+    border-radius: 10px;
+}
+
+#main-form {
+    padding: 1.5rem;
+}
+
+h1 {
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: rgb(43, 66, 70);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: "Karla", sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+}
+
+.name-fields {
+    display: flex;
+    gap: 1rem;
+}
+
+.name-fields div {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.radio-input {
+    display: flex;
+    gap: 1rem;
+}
+
+input[type="radio"] {
+  accent-color: rgb(12, 125, 105);
+}
+
+
+.radio-item:has(input:checked) {
+  background-color: rgba(12, 125, 105, 0.1);
+  border: 1.5px solid rgb(12, 125, 105);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.radio-item {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 0.9rem 1rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+}
+
+input, textarea {
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 0.9rem;
+}
+
+input:hover, textarea:hover {
+    cursor: pointer;
+}
+
+.radio-input:hover {
+    cursor: pointer;
+}
+
+label {
+   margin: 1rem 0;
+}
+
+.radio-item label {
+    margin: 0;
+}
+
+.checkbox {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox input:checked {
+  accent-color: rgb(12, 125, 52);
+}
+
+input[type="checkbox"], .checkbox label {
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: rgb(12, 125, 105);
+    color: white;
+    font-family: "Karla", sans-serif;
+    font-weight: 600;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(43, 66, 70);
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus, textarea:focus  {
+    border: 1.5px solid rgb(12, 125, 52);
+    outline: none;
+}
+
+
+@media (max-width: 600px) {
+  .radio-input {
+    flex-direction: column;
+  }
+
+  .name-fields {
+    flex-direction: column;
+  }
+
+    .radio-input {
+    flex-direction: column;
+  }
+
+  .radio-item {
+    width: 100%;
+  }
+}
